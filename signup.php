@@ -47,27 +47,13 @@ else{  $_SESSION['failure'] = "Email is invalid";}
 
 
  ?>
-<h1>Sign Up</h1>
-
-<?php
-
-if ( isset($_SESSION['failure']) ) {
-		echo('<p style="color: red;">'.htmlentities($_SESSION['failure'])."</p>\n");
-		unset($_SESSION['failure']);
-}
-if ( isset($_SESSION['success']) ) {
-		echo('<p style="color: red;">'.htmlentities($_SESSION['success'])."</p>\n");
-		unset($_SESSION['success']);
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
 
 
-<!-- Mirrored from netgon.net/artstyles/oliver/new/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Jun 2020 15:24:44 GMT -->
 <head>
     <meta charset="utf-8" />
-    <title>Photowarriors</title>
+    <title>photocomptia</title>
 
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -87,10 +73,27 @@ if ( isset($_SESSION['success']) ) {
 	<link rel="stylesheet" type="text/css" href="style/style.css"/>
 
 	<!-- Modernizr -->
-	<script src="js/modernizr.custom.js" type="text/javascript"></script>
 
-</head>
-<form id="contact-form" data-toggle="validator">
+
+</head><body>
+<h1>Sign Up</h1>
+<?php
+
+if ( isset($_SESSION['failure']) ) {
+		echo('<p style="color: red;">'.htmlentities($_SESSION['failure'])."</p>\n");
+		unset($_SESSION['failure']);
+}
+if ( isset($_SESSION['success']) ) {
+		echo('<p style="color: red;">'.htmlentities($_SESSION['success'])."</p>\n");
+		unset($_SESSION['success']);
+}
+?>
+
+
+
+<!-- Mirrored from netgon.net/artstyles/oliver/new/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Jun 2020 15:24:44 GMT -->
+
+<form id="contact-form" method="post "data-toggle="validator">
 			    <div class="container container_md">
 			        <div class="row">
 				        <div class="col-lg-6">
@@ -102,7 +105,7 @@ if ( isset($_SESSION['success']) ) {
 				        <div class="col-lg-6">
 															<div class="form-group">
 											<label for="password" class="label">Password *</label>
-																	<input type="tel" class="form-control input" id="password" name="psw" required data-error="Please, enter your password." autocomplete="off">
+																	<input type="password" class="form-control input" id="password" name="psw" required data-error="Please, enter your password." autocomplete="off">
 
 									</div>
 				        </div>
@@ -111,17 +114,27 @@ if ( isset($_SESSION['success']) ) {
 				        <div class="col-lg-6">
                             <div class="form-group">
 						        <label for="email" class="label">Email *</label>
-                                <input type="email" class="form-control input" id="email" name="email" required data-error="Please, enter your email." autocomplete="off">
+                                <input type="text" class="form-control input" id="email" name="email" required data-error="Please, enter your email." autocomplete="off">
 						    </div>
 				        </div>
 				        <div class="col-lg-6">
                             <div class="form-group">
 						        <label for="phone" class="label">Phone *</label>
-                                <input type="tel" class="form-control input" id="phone" name="mbno" required data-error="Please, enter your phone." autocomplete="off">
+                                <input type="text" class="form-control input" id="phone" name="mbno" required data-error="Please, enter your phone." autocomplete="off">
 
 						    </div>
 				        </div>
 			        </div>
+							<div class="row">
+							 <div class="col-lg-12">
+								 <div class="btn-block text-center">
+								 <button type="submit" name="Signup" class="btn">Sign UP</button>
+								 <div id="validator-contact" class="hidden"></div>
+							 </div>
+							 </div>
+						 </div>
 
 			    </div>
             </form>
+</body>
+</html>
