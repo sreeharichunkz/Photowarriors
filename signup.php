@@ -37,7 +37,7 @@ $_SESSION['email']=$email;
 }
 else{  $_SESSION['failure'] = "Email is invalid";}
 				} else{
-						$_SESSION['failure'] = "year must be numeric";
+						$_SESSION['failure'] = "Mobile no must be numeric";
 				}
 		} else{
 		$_SESSION['failure']  = "All fields are required";
@@ -53,7 +53,7 @@ else{  $_SESSION['failure'] = "Email is invalid";}
 
 <head>
     <meta charset="utf-8" />
-    <title>photocomptia</title>
+    <title>Photowarriors</title>
 
 	<!-- Meta Data -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,19 +93,19 @@ if ( isset($_SESSION['success']) ) {
 
 <!-- Mirrored from netgon.net/artstyles/oliver/new/dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Jun 2020 15:24:44 GMT -->
 
-<form id="contact-form" method="post "data-toggle="validator">
+<form  method="post" id="contact-form" data-toggle="validator">
 			    <div class="container container_md">
 			        <div class="row">
 				        <div class="col-lg-6">
                             <div class="form-group">
 						        <label for="firstName" class="label">First Name *</label>
-                                <input type="text" class="form-control input" id="firstName" name="uname" required data-error="Please, enter your first name." autocomplete="off">
+                                <input type="text"  id="firstName" name="uname" required data-error="Please, enter your first name." autocomplete="off">
 						    </div>
 				        </div>
 				        <div class="col-lg-6">
 															<div class="form-group">
 											<label for="password" class="label">Password *</label>
-																	<input type="password" class="form-control input" id="password" name="psw" required data-error="Please, enter your password." autocomplete="off">
+																	<input type="password"  id="password" name="psw" required data-error="Please, enter your password." autocomplete="off">
 
 									</div>
 				        </div>
@@ -114,13 +114,13 @@ if ( isset($_SESSION['success']) ) {
 				        <div class="col-lg-6">
                             <div class="form-group">
 						        <label for="email" class="label">Email *</label>
-                                <input type="text" class="form-control input" id="email" name="email" required data-error="Please, enter your email." autocomplete="off">
+                                <input type="text" id="email" name="email" required data-error="Please, enter your email." autocomplete="off">
 						    </div>
 				        </div>
 				        <div class="col-lg-6">
                             <div class="form-group">
 						        <label for="phone" class="label">Phone *</label>
-                                <input type="text" class="form-control input" id="phone" name="mbno" required data-error="Please, enter your phone." autocomplete="off">
+                                <input type="text" id="phone" name="mbno" required data-error="Please, enter your phone." autocomplete="off">
 
 						    </div>
 				        </div>
@@ -128,13 +128,14 @@ if ( isset($_SESSION['success']) ) {
 							<div class="row">
 							 <div class="col-lg-12">
 								 <div class="btn-block text-center">
-								 <button type="submit" name="Signup" class="btn">Sign UP</button>
-								 <div id="validator-contact" class="hidden"></div>
+								 <input type="submit" name="signup" class="btn" value="Sign UP">
+
 							 </div>
 							 </div>
 						 </div>
 
 			    </div>
             </form>
+						
 </body>
 </html>
